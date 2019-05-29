@@ -24,11 +24,11 @@ public class ReizigerSnowflakeDao extends SnowflakeBaseDao implements ReizigerDa
 		ResultSet rs = stmt.executeQuery(queryText);
 		
 		while(rs.next()) {
-			int reizigerID = rs.getInt("reizigerid");
-			String voorletters = rs.getString("voorletters");
-			String tussenvoegsel = rs.getString("tussenvoegsel");
-			String achternaam = rs.getString("achternaam");
-			Date geboortedatum = rs.getDate("gebortedatum");
+			int reizigerID = rs.getInt("REIZIGERID");
+			String voorletters = rs.getString("VOORLETTERS");
+			String tussenvoegsel = rs.getString("TUSSENVOEGSEL");
+			String achternaam = rs.getString("ACHTERNAAM");
+			Date geboortedatum = rs.getDate("GEBORTEDATUM");
 			
 			Reiziger r = new Reiziger(reizigerID, voorletters, tussenvoegsel, achternaam, geboortedatum);
 			r.setKaarten(kaartDao.findByKaarthouder(r));
@@ -53,11 +53,11 @@ public class ReizigerSnowflakeDao extends SnowflakeBaseDao implements ReizigerDa
 		ResultSet rs = pstmt.executeQuery();
 		
 		rs.next();
-		int reizigerID = rs.getInt("reizigerid");
-		String voorletters = rs.getString("voorletters");
-		String tussenvoegsel = rs.getString("tussenvoegsel");
-		String achternaam = rs.getString("achternaam");
-		Date geboortedatum = rs.getDate("gebortedatum");
+		int reizigerID = rs.getInt("REIZIGERID");
+		String voorletters = rs.getString("VOORLETTERS");
+		String tussenvoegsel = rs.getString("TUSSENVOEGSEL");
+		String achternaam = rs.getString("ACHTERNAAM");
+		Date geboortedatum = rs.getDate("GEBORTEDATUM");
 		
 		Reiziger r = new Reiziger(reizigerID, voorletters, tussenvoegsel, achternaam, geboortedatum);
 		r.setKaarten(kaartDao.findByKaarthouder(r));
@@ -79,11 +79,11 @@ public class ReizigerSnowflakeDao extends SnowflakeBaseDao implements ReizigerDa
 		ResultSet rs = pstmt.executeQuery();
 		
 		while(rs.next()) {
-			int reizigerID = rs.getInt("reizigerid");
-			String voorletters = rs.getString("voorletters");
-			String tussenvoegsel = rs.getString("tussenvoegsel");
-			String achternaam = rs.getString("achternaam");
-			Date geboortedatum = rs.getDate("gebortedatum");
+			int reizigerID = rs.getInt("REIZIGERID");
+			String voorletters = rs.getString("VOORLETTERS");
+			String tussenvoegsel = rs.getString("TUSSENVOEGSEL");
+			String achternaam = rs.getString("ACHTERNAAM");
+			Date geboortedatum = rs.getDate("GEBORTEDATUM");
 			
 			Reiziger r = new Reiziger(reizigerID, voorletters, tussenvoegsel, achternaam, geboortedatum);
 			list.add(r);
