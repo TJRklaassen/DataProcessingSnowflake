@@ -137,11 +137,10 @@ public class ReizigerSnowflakeDao extends SnowflakeBaseDao implements ReizigerDa
 		try {
 			Connection conn = getConnection();
 			
-			String queryText = "DELETE FROM reiziger WHERE reizigerid = ?";
+			String queryText = "DELETE FROM reiziger WHERE REIZIGERID = ?";
 			PreparedStatement pstmt = conn.prepareStatement(queryText);
 			pstmt.setInt(1, reiziger.getReizigerID());
 			pstmt.executeUpdate();
-			
 			pstmt.close();
 			closeConnection(conn);
 			

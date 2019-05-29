@@ -26,7 +26,7 @@ public abstract class SnowflakeBaseDao {
                 properties.put("warehouse", "compute_wh");
 
                 conn = DriverManager.getConnection(DB_URL, properties);
-                conn.setAutoCommit(false);
+                conn.setAutoCommit(true);
             }
         }
         catch (SQLException | ClassNotFoundException e) {
