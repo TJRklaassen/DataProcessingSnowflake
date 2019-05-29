@@ -43,11 +43,11 @@ public class OVChipkaartSnowflakeDao extends SnowflakeBaseDao implements OVChipk
 		ResultSet rs = pstmt.executeQuery();
 		
 		while(rs.next()) {
-			int kaartnummer = rs.getInt("kaartnummer");
-			Date geldigtot = rs.getDate("geldigtot");
-			int klasse = rs.getInt("klasse");
-			double saldo = rs.getDouble("saldo");
-			int reizigerid = rs.getInt("reizigerid");
+			int kaartnummer = rs.getInt("KAARTNUMMER");
+			Date geldigtot = rs.getDate("GELDIGTOT");
+			int klasse = rs.getInt("KLASSE");
+			double saldo = rs.getDouble("SALDO");
+			int reizigerid = rs.getInt("REIZIGERID");
 			
 			Reiziger reiziger = reizigerDao.findByReizigerID(reizigerid);
 			OVChipkaart ov = new OVChipkaart(kaartnummer, geldigtot, klasse, saldo, reiziger);			
@@ -71,11 +71,11 @@ public class OVChipkaartSnowflakeDao extends SnowflakeBaseDao implements OVChipk
 		ResultSet rs = pstmt.executeQuery();
 		
 		if(rs.next()) {
-			int kaartnummer = rs.getInt("kaartnummer");
-			Date geldigtot = rs.getDate("geldigtot");
-			int klasse = rs.getInt("klasse");
-			double saldo = rs.getDouble("saldo");
-			int reizigerid = rs.getInt("reizigerid");
+			int kaartnummer = rs.getInt("KAARTNUMMER");
+			Date geldigtot = rs.getDate("GELDIGTOT");
+			int klasse = rs.getInt("KLASSE");
+			double saldo = rs.getDouble("SALDO");
+			int reizigerid = rs.getInt("REIZIGERID");
 			
 			Reiziger reiziger = reizigerDao.findByReizigerID(reizigerid);
 			OVChipkaart ov = new OVChipkaart(kaartnummer, geldigtot, klasse, saldo, reiziger);
@@ -100,10 +100,10 @@ public class OVChipkaartSnowflakeDao extends SnowflakeBaseDao implements OVChipk
 		ResultSet rs = pstmt.executeQuery();
 		
 		while(rs.next()) {
-			int kaartnummer = rs.getInt("kaartnummer");
-			Date geldigtot = rs.getDate("geldigtot");
-			int klasse = rs.getInt("klasse");
-			double saldo = rs.getDouble("saldo");
+			int kaartnummer = rs.getInt("KAARTNUMMER");
+			Date geldigtot = rs.getDate("GELDIGTOT");
+			int klasse = rs.getInt("KLASSE");
+			double saldo = rs.getDouble("SALDO");
 			
 			OVChipkaart ov = new OVChipkaart(kaartnummer, geldigtot, klasse, saldo, kaarthouder);
 			list.add(ov);

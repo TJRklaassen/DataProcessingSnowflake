@@ -43,10 +43,10 @@ public class ProductSnowflakeDao extends SnowflakeBaseDao implements ProductDao 
 		ResultSet rs = stmt.executeQuery(queryText);
 		
 		while(rs.next()) {
-			int productNummer = rs.getInt("productnummer");
-			String productNaam = rs.getString("productnaam");
-			String beschrijving = rs.getString("beschrijving");
-			double prijs = rs.getDouble("prijs");
+			int productNummer = rs.getInt("PRODUCTNUMMER");
+			String productNaam = rs.getString("PRODUCTNAAM");
+			String beschrijving = rs.getString("BESCHRIJVING");
+			double prijs = rs.getDouble("PRIJS");
 			
 			Product p = new Product(productNummer, productNaam, beschrijving, prijs);
 			p.setStaatOpKaarten(kaartDao.findByProduct(p));
@@ -86,10 +86,10 @@ public class ProductSnowflakeDao extends SnowflakeBaseDao implements ProductDao 
 		ResultSet rs = pstmt.executeQuery();
 		
 		while(rs.next()) {
-			int productNummer = rs.getInt("productnummer");
-			String productNaam = rs.getString("productnaam");
-			String beschrijving = rs.getString("beschrijving");
-			double prijs = rs.getDouble("prijs");
+			int productNummer = rs.getInt("PRODUCTNUMMER");
+			String productNaam = rs.getString("PRODUCTNAAM");
+			String beschrijving = rs.getString("BESCHRIJVING");
+			double prijs = rs.getDouble("PRIJS");
 			
 			Product p = new Product(productNummer, productNaam, beschrijving, prijs);			
 			list.add(p);

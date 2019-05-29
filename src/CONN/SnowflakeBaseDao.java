@@ -26,7 +26,19 @@ public abstract class SnowflakeBaseDao {
         }
     }
 
-    public Connection getConnection() { return conn; }
+    public Connection getConnection() { 
+    	try {
+            if ( conn == null || conn.isClosed()) {
+                conn = DriverManager.getConnection(CONNECTION_STRING);
+                conn.setAutoCommit(false);
+            }
+        }
+        catch (SQLException e) {
+            System.out.println("Connection Failure");
+            e.printStackTrace();
+        }
+    	return conn;
+    }
 
     public void closeConnection(Connection connection) throws SQLException {
         connection.close();
