@@ -19,7 +19,7 @@ public class ProductSnowflakeDao extends SnowflakeBaseDao implements ProductDao 
 		ArrayList<OVChipkaart> kaartList = kaartDao.findAll();
 		
 		for(OVChipkaart ov : kaartList) {
-			System.out.println("Alle producten op kaart " + ov.getKaartnummer() + ":");
+			System.out.println("Kaart " + ov.getKaartnummer() + ":");
 			
 			for(Product p : ov.getProductenOpKaart()) {
 				System.out.println(String.format("%s. %s. %s. prijs: %s",
@@ -54,7 +54,7 @@ public class ProductSnowflakeDao extends SnowflakeBaseDao implements ProductDao 
 		}
 		
 		for(Product p : list) {
-			System.out.println("Alle kaarten met " + p.getProductNaam() + ":");
+			System.out.println(p.getProductNaam() + ":");
 			
 			for(OVChipkaart ov : p.getStaatOpKaarten()) {
 				System.out.println(String.format("Kaartnummer: %s, Einddatum: %s, Klasse: %s, Saldo: %s",

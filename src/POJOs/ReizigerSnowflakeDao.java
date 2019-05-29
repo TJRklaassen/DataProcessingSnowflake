@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -24,11 +25,11 @@ public class ReizigerSnowflakeDao extends SnowflakeBaseDao implements ReizigerDa
 		ResultSet rs = stmt.executeQuery(queryText);
 		
 		while(rs.next()) {
-			int reizigerID = rs.getInt("REIZIGERID");
-			String voorletters = rs.getString("VOORLETTERS");
-			String tussenvoegsel = rs.getString("TUSSENVOEGSEL");
-			String achternaam = rs.getString("ACHTERNAAM");
-			Date geboortedatum = rs.getDate("GEBORTEDATUM");
+			int reizigerID = rs.getInt(1);
+			String voorletters = rs.getString(2);
+			String tussenvoegsel = rs.getString(3);
+			String achternaam = rs.getString(4);
+			Date geboortedatum = rs.getDate(5);
 			
 			Reiziger r = new Reiziger(reizigerID, voorletters, tussenvoegsel, achternaam, geboortedatum);
 			r.setKaarten(kaartDao.findByKaarthouder(r));
