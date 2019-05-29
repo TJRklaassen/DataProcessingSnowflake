@@ -2,8 +2,8 @@
 Groepsproject Data Processing 
 
 # Authors
-Stephen Nedd \n
-Lennart Koster
-Maurits Koot
-Floris van Maldegem
-Tip Klaassen
+Stephen Nedd -
+Lennart Koster - 
+Maurits Koot -
+Floris van Maldegem -
+Tip Klaassen -
