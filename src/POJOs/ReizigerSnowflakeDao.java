@@ -16,7 +16,7 @@ public class ReizigerSnowflakeDao extends SnowflakeBaseDao implements ReizigerDa
 	public ArrayList<Reiziger> findAll() throws SQLException {		
 		OVChipkaartSnowflakeDao kaartDao = new OVChipkaartSnowflakeDao();
 		
-		Connection conn = getConnection();
+		Connection conn = this.getConnection();
 		Statement stmt = conn.createStatement();
 		ArrayList<Reiziger> list = new ArrayList<Reiziger>();
 		
