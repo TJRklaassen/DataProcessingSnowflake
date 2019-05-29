@@ -1,33 +1,69 @@
 package POJOs;
 
+import java.sql.Date;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Reiziger {
+	private int reizigerID;
+	private String voorletters;
+	private String tussenvoegsel;
+	private String achternaam;
+	private Date gbdatum;
+	private ArrayList<OVChipkaart> kaarten = new ArrayList<OVChipkaart>();
+	
+	public Reiziger(int reizigerID, String voorletters, String tussenvoegsel, String achternaam, Date gbdatum) {
+		this.reizigerID = reizigerID;
+		this.voorletters = voorletters;
+		this.tussenvoegsel = tussenvoegsel;
+		this.achternaam = achternaam;
+		this.gbdatum = gbdatum;
+	}
+	
+	public int getReizigerID() {
+		return reizigerID;
+	}
 
-    private int reizigerID;
-    private String naam;
-    private Date gbDatum;
-    private ArrayList<OVChipkaart> ovChipkaarten;
+	public void setReizigerID(int reizigerID) {
+		this.reizigerID = reizigerID;
+	}
 
-    public Reiziger(int rID, String nm, Date gbDatum, ArrayList<OVChipkaart> ovChipkaarten) {
-        this.reizigerID = rID;
-        this.naam = nm;
-        this.gbDatum = gbDatum;
-        this.ovChipkaarten = ovChipkaarten;
-    }
+	public String getVoorletters() {
+		return voorletters;
+	}
 
-    public int getReizigerID() { return reizigerID; }
-    public void setReizigerID(int ID) { this.reizigerID = ID; }
+	public void setVoorletters(String voorletters) {
+		this.voorletters = voorletters;
+	}
 
-    public String getNaam() { return naam; }
-    public void setNaam( String naam) { this.naam = naam; }
+	public String getTussenvoegsel() {
+		return tussenvoegsel;
+	}
 
-    public Date getGbDatum() { return gbDatum; }
-    public void setGbDatum( Date gbDatum ) { this.gbDatum = gbDatum; }
+	public void setTussenvoegsel(String tussenvoegsel) {
+		this.tussenvoegsel = tussenvoegsel;
+	}
 
-    public ArrayList<OVChipkaart> getOvChipkaarten() { return ovChipkaarten; }
-    public void setOvChipkaarten(ArrayList<OVChipkaart> ovChipkaarten) {
-        this.ovChipkaarten = ovChipkaarten;
-    }
+	public String getAchternaam() {
+		return achternaam;
+	}
+
+	public void setAchternaam(String achternaam) {
+		this.achternaam = achternaam;
+	}
+
+	public Date getGbdatum() {
+		return gbdatum;
+	}
+
+	public void setGbdatum(Date gbdatum) {
+		this.gbdatum = gbdatum;
+	}
+
+	public ArrayList<OVChipkaart> getKaarten() {
+		return kaarten;
+	}
+
+	public void setKaarten(ArrayList<OVChipkaart> kaarten) {
+		this.kaarten = kaarten;
+	}
 }
