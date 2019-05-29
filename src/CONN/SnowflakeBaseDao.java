@@ -3,7 +3,7 @@ package CONN;
 import java.sql.*;
 import net.snowflake.client.jdbc.SnowflakeDriver;
 
-public class SnowflakeBaseDao {
+public abstract class SnowflakeBaseDao {
     private static final String DB_DRIV = "";
     private static final String DB_URL = "jdbc:snowflake://lm27557.eu-central-1.snowflakecomputing.com/?";
     private static final String DB_USER = "DataProcessingV1B";
